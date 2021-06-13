@@ -6,12 +6,6 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        /*
-        to do
-        9. Write a program to sort an array of given integers using the Bubble sorting Algorithm. The principle of bubble sort is to scan the elements from left-to-right, and whenever two adjacent elements are out-of-order, they are swapped.
-        10. Write a program to compute the average value of an array of integers except the largest and smallest values.
-         */
-
         //1
         System.out.println("Exercise #1");
         CheckOddEven(2);
@@ -53,6 +47,18 @@ public class Main {
         //8
         System.out.println("Exercise #8");
         RemoveFromArray(8);
+        System.out.println("\n");
+
+        //9
+        System.out.println("Exercise #9");
+        int arr[] = {90, 12, 34, 13, 1, 4, 6};
+        bubbleSort(arr);
+        System.out.println("\n");
+
+        //10
+        System.out.println("Exercise #10");
+        int arr2[] = {90, 12, 34, 13, 1, 4, 6};
+        arrayAverageMinusMinMax(arr2);
         System.out.println("\n");
     }
 
@@ -154,17 +160,17 @@ public class Main {
     }
 
     //7. Write a program to insert an element (specific position) into an array.
-    public static void AddToArray(int numberToAdd, int position){
-        int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    public static void AddToArray(int numberToAdd, int position) {
+        int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         System.out.println("The original array is " + Arrays.toString(arr));
-        arr[position]=numberToAdd;
+        arr[position] = numberToAdd;
         System.out.println("The array is " + Arrays.toString(arr));
     }
 
     //8. Write a program to remove all occurrences of a specified value in a given array of integers
     // and return the new array. There can be duplicates in the array.
-    public static void RemoveFromArray(int numberToRemove){
-        int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    public static void RemoveFromArray(int numberToRemove) {
+        int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         System.out.println("The original array is " + Arrays.toString(arr));
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == numberToRemove) {
@@ -173,5 +179,44 @@ public class Main {
         }
 
         System.out.println("The array is " + Arrays.toString(arr));
+    }
+
+    //9. Write a program to sort an array of given integers using the Bubble sorting Algorithm.
+    // The principle of bubble sort is to scan the elements from left-to-right,
+    // and whenever two adjacent elements are out-of-order, they are swapped.
+    public static void bubbleSort(int arr[]) {
+        System.out.println("The original array is " + Arrays.toString(arr));
+        int n = arr.length;
+        int temp = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 1; j < n - i; j++) {
+                if (arr[j - 1] > arr[j]) {
+                    temp = arr[j - 1];
+                    arr[j - 1] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        System.out.println("The bubble sorted array is " + Arrays.toString(arr));
+    }
+
+    //10. Write a program to compute the average value of an array of integers
+    // except the largest and smallest values.
+    public static void arrayAverageMinusMinMax(int arr[]) {
+        System.out.println("The original array is " + Arrays.toString(arr));
+        System.out.println("The min value of the array is " + Arrays.stream(arr).min());
+        System.out.println("The max value of the array is " + Arrays.stream(arr).max());
+        System.out.println("The average value of the array is " + Arrays.stream(arr).average());
+
+        int copyArr[]= new int[arr.length-2];
+
+        for (int i = 0, j = 0; i < arr.length; i++) {
+            if (arr[i] == Arrays.stream(arr).max().getAsInt() || arr[i] == Arrays.stream(arr).min().getAsInt()) {
+                continue;
+            }
+            else copyArr[j++] = arr[i];
+        }
+        System.out.println("The new array is " + Arrays.toString(copyArr));
+        System.out.println("The average value of the array without the min and max values is " + Arrays.stream(copyArr).average());
     }
 }
