@@ -1,5 +1,6 @@
 package com.company;
 
+import java.sql.SQLOutput;
 import java.text.DecimalFormat;
 import java.util.*;
 
@@ -21,16 +22,6 @@ public class Main {
         list.add("asf");
         list.add("mko");
         list.add("tyt");
-
-        /*to do
-        10. Write a Java program to swap every two adjacent nodes of a given linked list.
-                    Original Linked list: 10->20->30->40->50
-                    Expected Output: 20->10->40->30->50
-        11. Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
-                    Input: 1->2->4, 1->3->4
-                    Output: 1->1->2->3->4->4
-        12. Make a Map that associates the following employee IDs with names. The point here is to associate keys with values, then retrieve values later based on keys. Test several valid and invalid ID’s and print the associated name.
-         */
 
 
         //1.
@@ -76,6 +67,21 @@ public class Main {
         //9.
         System.out.println("Exercise #9");
         collectAndReverse(1,2,3,4,5);
+        System.out.println("\n");
+
+        //10.
+        System.out.println("Exercise #10");
+        swapAdjacentNodes();
+        System.out.println("\n");
+
+        //11.
+        System.out.println("Exercise #11");
+        mergeSortedList();
+        System.out.println("\n");
+
+        //12.
+        System.out.println("Exercise #12");
+        employeeID();
         System.out.println("\n");
     }
 
@@ -174,7 +180,7 @@ public class Main {
 
     //9. Write a function that takes an arbitrary number of integers as arguments
     // and returns a collection of them stored in reverse order.
-    public static void collectAndReverse(int a, int b, int c, int d, int e){
+    public static void collectAndReverse(int a, int b, int c, int d, int e) {
         List<Integer> list = new ArrayList<>();
         list.add(a);
         list.add(b);
@@ -187,4 +193,77 @@ public class Main {
         System.out.println("The reverse is " + list);
     }
 
+    // 10. Write a Java program to swap every two adjacent nodes of a given linked list.
+    //                    Original Linked list: 10->20->30->40->50
+    //                    Expected Output: 20->10->40->30->50
+    public static void swapAdjacentNodes() {
+        LinkedList<Integer> linked = new LinkedList<>();
+        linked.add(10);
+        linked.add(20);
+        linked.add(30);
+        linked.add(40);
+        linked.add(50);
+
+        System.out.println("The original list is " + linked);
+
+        LinkedList<Integer> linked2 = new LinkedList<>();
+        linked2.add(0, linked.get(1));
+        linked2.add(1, linked.get(0));
+        linked2.add(2, linked.get(3));
+        linked2.add(3, linked.get(2));
+        linked2.add(4, linked.get(4));
+
+        System.out.println("The swapped list is " + linked2);
+    }
+
+    //11. Merge two sorted linked lists and return it as a new list.
+    // The new list should be made by splicing together the nodes of the first two lists.
+    //                    Input: 1->2->4, 1->3->4
+    //                    Output: 1->1->2->3->4->4
+    public static void mergeSortedList() {
+        LinkedList<Integer> linked1 = new LinkedList<>();
+        linked1.add(1);
+        linked1.add(2);
+        linked1.add(4);
+
+        LinkedList<Integer> linked2 = new LinkedList<>();
+        linked2.add(1);
+        linked2.add(3);
+        linked2.add(4);
+
+        System.out.println("The original list1 is " + linked1);
+        System.out.println("The original list2 is " + linked2);
+
+        linked1.addLast(linked2.get(0));
+        linked1.addLast(linked2.get(1));
+        linked1.addLast(linked2.get(2));
+        Collections.sort(linked1);
+
+        System.out.println("The original list1 is " + linked1);
+    }
+
+    //12. Make a Map that associates the following employee IDs with names.
+    // The point here is to associate keys with values, then retrieve values later based on keys.
+    // Test several valid and invalid ID’s and print the associated name.
+    public static void employeeID() {
+        HashMap<String, String> map = new HashMap<String, String>();
+        map.put("a1234", "Adrian");
+        map.put("b4321", "Vlad");
+        map.put("c3241", "Mihai");
+        map.put("d1432", "Calin");
+        map.put("e2431", "Iulian");
+
+        System.out.println("The employees are: ");
+        System.out.println("ID  " + "  Name");
+        for (Map.Entry m : map.entrySet()) {
+            System.out.println(m.getKey() + " " + m.getValue());
+        }
+
+        System.out.println("\n\nSome employees are: ");
+        System.out.println(map.get("e2431"));
+        System.out.println(map.get("c3241"));
+        System.out.println(map.get("123"));
+        System.out.println(map.get("a1234"));
+        System.out.println(map.get("456"));
+    }
 }
