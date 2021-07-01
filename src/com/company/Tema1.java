@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class Tema1 {
 
@@ -139,6 +140,8 @@ public class Tema1 {
 
         String string = str.nextLine();
 
+        //my first answer
+        /*
         int countString = 0;
         for (int i = 0; i < string.length(); i++) {
             char ch = string.charAt(i);
@@ -154,9 +157,38 @@ public class Tema1 {
                 countDigits++;
             }
         }
+        */
 
-        System.out.println("Number of vowels in the given sentence is " + countString);
-        System.out.println("Number of digits in the given sentence is " + countDigits);
+        //more optimal option using char
+        /*
+        int countString = 0;
+        int countDigits = 0;
+
+        String allVowels = "aeiou";
+
+        for (int i = 0; i < string.length(); ++i) {
+            if (Character.isDigit(string.charAt(i))) {
+                countDigits++;
+            } else if (allVowels.contains("" + string.charAt(i))) {
+                countString++;
+            }
+        }
+        */
+
+        //the most efficient answer
+        int count = 0;
+        for (int i = 0; i < string.length(); i++) {
+            char ch = string.charAt(i);
+            if (Pattern.matches("[aeiou]|[0-9]", Character.toString(ch))) {
+                count++;
+            }
+        }
+
+        System.out.println("Number of digits and vowels in the given sentence is " + count);
+
+
+        //System.out.println("Number of vowels in the given sentence is " + countString);
+        //System.out.println("Number of digits in the given sentence is " + countDigits);
     }
 
     //7. Write a program to insert an element (specific position) into an array.
@@ -208,13 +240,12 @@ public class Tema1 {
         System.out.println("The max value of the array is " + Arrays.stream(arr).max());
         System.out.println("The average value of the array is " + Arrays.stream(arr).average());
 
-        int copyArr[]= new int[arr.length-2];
+        int copyArr[] = new int[arr.length - 2];
 
         for (int i = 0, j = 0; i < arr.length; i++) {
             if (arr[i] == Arrays.stream(arr).max().getAsInt() || arr[i] == Arrays.stream(arr).min().getAsInt()) {
                 continue;
-            }
-            else copyArr[j++] = arr[i];
+            } else copyArr[j++] = arr[i];
         }
         System.out.println("The new array is " + Arrays.toString(copyArr));
         System.out.println("The average value of the array without the min and max values is " + Arrays.stream(copyArr).average());
