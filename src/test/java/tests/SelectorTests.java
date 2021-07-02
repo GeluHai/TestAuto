@@ -12,7 +12,7 @@ import utils.Driver;
 
 import java.util.concurrent.TimeUnit;
 
-public class FirstTest {
+public class SelectorTests {
 
     public static Driver driver = null;
     String baseUrl = "http://automationpractice.com";
@@ -27,7 +27,6 @@ public class FirstTest {
         driver.webDriver.findElement(By.className("container"));
         driver.webDriver.findElement(By.cssSelector("img[alt='My Store']"));
         driver.webDriver.findElement(By.xpath("//div[@id='header_logo']//img[@alt='My Store']"));
-
 
         driver.exit();
     }
@@ -147,9 +146,6 @@ public class FirstTest {
         WebElement deleteFirstItemButton = driver.webDriver.findElement(By.xpath("//table[@id='cart_summary']/tbody/tr[1]//a[@title='Delete']/i[@class='icon-trash']"));
         deleteFirstItemButton.click();
 
-
         driver.exit();
     }
-
-
 }
