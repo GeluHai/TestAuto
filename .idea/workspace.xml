@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e313cbfe-fe27-42c6-a9a8-7eea85f49788" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/ExtraSelectorTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/FirstTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/FirstTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/FirstTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/utils/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/utils/Driver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SelectorTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/FirstTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +41,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../svtesthubauto" />
   </component>
-  <component name="RunManager" selected="TestNG.FirstTest.checkoutDeleteFlowTest">
-    <configuration name="FirstTest.changeDressAttributesTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.ExtraSelectorTests.listBoxSectionTest">
+    <configuration name="ExtraSelectorTests.bootstrapModalTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MavenTestAuto" />
       <extension name="coverage">
         <pattern>
@@ -52,8 +51,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.FirstTest" />
-      <option name="METHOD_NAME" value="changeDressAttributesTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.ExtraSelectorTests" />
+      <option name="METHOD_NAME" value="bootstrapModalTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -61,7 +60,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstTest.checkoutDeleteFlowTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ExtraSelectorTests.checkboxDemoTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MavenTestAuto" />
       <extension name="coverage">
         <pattern>
@@ -70,8 +69,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.FirstTest" />
-      <option name="METHOD_NAME" value="checkoutDeleteFlowTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.ExtraSelectorTests" />
+      <option name="METHOD_NAME" value="checkboxDemoTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -79,7 +78,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstTest.findDressTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ExtraSelectorTests.datePickerTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MavenTestAuto" />
       <extension name="coverage">
         <pattern>
@@ -88,8 +87,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.FirstTest" />
-      <option name="METHOD_NAME" value="findDressTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.ExtraSelectorTests" />
+      <option name="METHOD_NAME" value="datePickerTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -97,7 +96,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstTest.firstTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ExtraSelectorTests.listBoxSectionTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MavenTestAuto" />
       <extension name="coverage">
         <pattern>
@@ -106,8 +105,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.FirstTest" />
-      <option name="METHOD_NAME" value="firstTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.ExtraSelectorTests" />
+      <option name="METHOD_NAME" value="listBoxSectionTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExtraSelectorTests.tableTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MavenTestAuto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.ExtraSelectorTests" />
+      <option name="METHOD_NAME" value="tableTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -117,10 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.FirstTest.checkoutDeleteFlowTest" />
-        <item itemvalue="TestNG.FirstTest.changeDressAttributesTest" />
-        <item itemvalue="TestNG.FirstTest.findDressTest" />
-        <item itemvalue="TestNG.FirstTest.firstTest" />
+        <item itemvalue="TestNG.ExtraSelectorTests.listBoxSectionTest" />
+        <item itemvalue="TestNG.ExtraSelectorTests.bootstrapModalTest" />
+        <item itemvalue="TestNG.ExtraSelectorTests.tableTest" />
+        <item itemvalue="TestNG.ExtraSelectorTests.datePickerTest" />
+        <item itemvalue="TestNG.ExtraSelectorTests.checkboxDemoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -146,16 +164,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/FirstTest.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
