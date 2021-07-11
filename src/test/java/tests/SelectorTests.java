@@ -1,101 +1,111 @@
 package tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pages.HomePage;
+import pages.OrderPage;
+import pages.SearchResultPage;
 import utils.Driver;
 
-import java.util.concurrent.TimeUnit;
+public class SelectorTests extends BaseTest {
 
-public class SelectorTests {
+    //pages used
+    private HomePage homePage;
+    private SearchResultPage searchResultPage;
+    private OrderPage orderPage;
 
-    public static Driver driver = null;
-    String baseUrl = "http://automationpractice.com";
 
+    @BeforeMethod
+    void beforeMethod() {
+        homePage = new HomePage(Driver.getInstance().webDriver);
+        searchResultPage = new SearchResultPage(Driver.getInstance().webDriver);
+        orderPage = new OrderPage(Driver.getInstance().webDriver);
+    }
 
     @Test
     public void firstTest() {
-        driver = Driver.getInstance();
-        driver.navigate(baseUrl);
-
-        driver.webDriver.findElement(By.id("header_logo"));
-        driver.webDriver.findElement(By.className("container"));
-        driver.webDriver.findElement(By.cssSelector("img[alt='My Store']"));
-        driver.webDriver.findElement(By.xpath("//div[@id='header_logo']//img[@alt='My Store']"));
-
-        driver.exit();
+        homePage.openPage();
+        homePage.checkForElementsToBeVisible();
     }
 
     @Test
     public void findDressTest() {
         //1. Navigate to http://automationpractice.com
+        homePage.openPage();
+
         //2. Search for “dress”
+        homePage.searchFor("dress");
+
         //3. Click on the first item on the page
+        searchResultPage.clickFirstProduct();
+
+        searchResultPage.waitForFrameModalToAppear();
+        searchResultPage.switchToFrameModal();
+
         //4. Add to cart
-
-        driver = Driver.getInstance();
-
-        driver.navigate(baseUrl);
-
-        WebElement searchField = driver.webDriver.findElement(By.xpath("/html//input[@id='search_query_top']"));
-        searchField.sendKeys("dress");
-        WebElement searchButton = driver.webDriver.findElement(By.xpath("//form[@id='searchbox']/button[@name='submit_search']"));
-        searchButton.click();
-
-        WebElement firstProduct = driver.webDriver.findElement(By.xpath("//div[@id='center_column']/ul/li[1]"));
-        firstProduct.click();
-
-        WebElement iFrameModal = driver.webDriver.findElement(By.xpath("//iframe[@class='fancybox-iframe']"));
-        driver.waitForElementToAppear(iFrameModal);
-        driver.webDriver.switchTo().frame(iFrameModal);
-
-        WebElement addToCartButton = driver.webDriver.findElement(By.xpath("//p[@id='add_to_cart']/button[@name='Submit']"));
-        addToCartButton.click();
-
-        driver.exit();
+        searchResultPage.clickAddToCartButton();
     }
 
     @Test
     public void changeDressAttributesTest() {
         //1. Navigate to http://automationpractice.com
+        homePage.openPage();
+
         //2. Search for “dress”
+        homePage.searchFor("dress");
+
         //3. Click on the second item on the page
+        searchResultPage.clickSecondProduct();
+
+        searchResultPage.waitForFrameModalToAppear();
+        searchResultPage.switchToFrameModal();
+
         //4. Change size
+        searchResultPage.setQuantityTo("2");
+
         //5. Change color
+        searchResultPage.clickColorPink();
+
         //6. Add to cart
-
-        driver = Driver.getInstance();
-
-        driver.navigate(baseUrl);
-
-        WebElement searchField = driver.webDriver.findElement(By.xpath("/html//input[@id='search_query_top']"));
-        searchField.sendKeys("dress");
-        WebElement searchButton = driver.webDriver.findElement(By.xpath("//form[@id='searchbox']/button[@name='submit_search']"));
-        searchButton.click();
-
-        WebElement secondProduct = driver.webDriver.findElement(By.xpath("//div[@id='center_column']/ul/li[2]"));
-        secondProduct.click();
-
-        WebElement iFrameModal = driver.webDriver.findElement(By.xpath("//iframe[@class='fancybox-iframe']"));
-        driver.waitForElementToAppear(iFrameModal);
-        driver.webDriver.switchTo().frame(iFrameModal);
-
-        WebElement quantityField = driver.webDriver.findElement(By.id("quantity_wanted"));
-        quantityField.sendKeys("2");
-
-        WebElement colorPink = driver.webDriver.findElement(By.id("color_24"));
-        colorPink.click();
-
-        WebElement addToCartButton = driver.webDriver.findElement(By.xpath("//p[@id='add_to_cart']/button[@name='Submit']"));
-        addToCartButton.click();
-
-        driver.exit();
+        searchResultPage.clickAddToCartButton();
     }
+
+    @Test
+    public void checkoutDeleteFlowTest() {
+        //1. Navigate to http://automationpractice.com
+        homePage.openPage();
+
+        //2. Search for “dress”
+        homePage.searchFor("dress");
+
+        //3. Click on any item on the page
+        searchResultPage.clickSecondProduct();
+
+        searchResultPage.waitForFrameModalToAppear();
+        searchResultPage.switchToFrameModal();
+
+        //4. Change size and quantity
+        searchResultPage.setQuantityTo("2");
+        //searchResultPage.selectSizeNr(1); //not working at the moment, I don't know why
+
+        //5. Change color if possible
+        if (searchResultPage.colorPinkExits() != 0) {
+            searchResultPage.clickColorPink();
+        }
+
+        //6. Add to cart
+        searchResultPage.clickAddToCartButton();
+
+        //7. Click Proceed to checkout
+        searchResultPage.waitForLayerCartToAppear();
+        searchResultPage.clickProceedToCheckoutButton();
+
+        //8. Delete the product
+        orderPage.waitForCartTitleToAppear();
+        orderPage.clickDeleteFirstItemButton();
+    }
+
+/*
 
     @Test
     public void checkoutDeleteFlowTest() {
@@ -148,4 +158,6 @@ public class SelectorTests {
 
         driver.exit();
     }
+
+ */
 }

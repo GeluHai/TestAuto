@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class Driver {
 
     private static Driver driver = null;
-    public RemoteWebDriver webDriver;
+    public static RemoteWebDriver webDriver;
 
     private Driver() {
         setNewDriver();
@@ -42,7 +42,7 @@ public class Driver {
         webDriver.manage().window().maximize();
     }
 
-    public void exit() {
+    public static void exit() {
         try {
             if (webDriver != null) {
                 webDriver.close();
