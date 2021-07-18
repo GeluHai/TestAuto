@@ -12,8 +12,6 @@ public class ExtraSelectorTests {
     public static Driver driver = null;
     String baseUrl = "https://www.seleniumeasy.com/test/";
 
-    //to do
-
 
     //1. On the Input Forms section - checkbox demo:
     // build a single selector for the 4 options that allows you to choose between them using a parameter.
