@@ -5,19 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e313cbfe-fe27-42c6-a9a8-7eea85f49788" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/OrderPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/SearchResultPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/LayerCartPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/QuickViewProductPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ExtraSelectorTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ExtraSelectorTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SearchResultPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/SelectorTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SelectorTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/ExtraSelectorTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/ExtraSelectorTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/BasePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/HomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/OrderPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/OrderPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/SearchResultPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/SearchResultPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/BaseTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/tests/SelectorTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/SelectorTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/utils/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/utils/Driver.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../svtesthubauto" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="TestNG.SelectorTests.checkoutDeleteFlowTest">
     <configuration name="ExtraSelectorTests.listBoxSectionTest" type="TestNG" temporary="true" nameIsGenerated="true">
@@ -151,9 +152,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.SelectorTests.checkoutDeleteFlowTest" />
+        <item itemvalue="TestNG.SelectorTests.firstTest" />
         <item itemvalue="TestNG.SelectorTests.changeDressAttributesTest" />
         <item itemvalue="TestNG.SelectorTests.findDressTest" />
-        <item itemvalue="TestNG.SelectorTests.firstTest" />
         <item itemvalue="TestNG.ExtraSelectorTests.listBoxSectionTest" />
       </list>
     </recent_temporary>
@@ -180,65 +181,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/SelectorTests.java</url>
-          <line>114</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/SelectorTests.java</url>
-          <line>115</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/SelectorTests.java</url>
-          <line>111</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/SelectorTests.java</url>
-          <line>110</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/SelectorTests.java</url>
-          <line>99</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/SelectorTests.java</url>
-          <line>98</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/pages/SearchResultPage.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/pages/SearchResultPage.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/test/java/pages/SearchResultPage.java</url>
-          <line>31</line>
-          <properties field="sizeDropDown" class="pages.SearchResultPage" />
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/pages/SearchResultPage.java</url>
-          <line>71</line>
-          <properties class="pages.SearchResultPage" method="selectSizeNr">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
