@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e313cbfe-fe27-42c6-a9a8-7eea85f49788" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/week6/exercise2/Printer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/week6/exercise2/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/week6/exercise3/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/week6/exercise3/Ford.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/week6/exercise3/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/week6/exercise3/Vw.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,14 +51,28 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.152439" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
-  <component name="RunManager" selected="Application.Test (1)">
+  <component name="RunManager" selected="Application.Test (2)">
     <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="exercise2.Test" />
       <module name="MavenTestAuto" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="exercise2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exercise3.Test" />
+      <module name="MavenTestAuto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exercise3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -88,24 +104,6 @@
       <option name="SCRATCH_FILE_URL" value="file://$PROJECT_DIR$/src/com/week6/exercise1/Test.java" />
       <shortenClasspath name="NONE" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/com/week6/exercise1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SelectorTests.changeDressAttributesTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MavenTestAuto" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.SelectorTests" />
-      <option name="METHOD_NAME" value="changeDressAttributesTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,20 +146,20 @@
     </configuration>
     <list>
       <item itemvalue="Application.Test" />
+      <item itemvalue="Application.Test (1)" />
       <item itemvalue="JAR Application.TestJar" />
       <item itemvalue="Java Scratch.Test java" />
-      <item itemvalue="TestNG.SelectorTests.changeDressAttributesTest" />
       <item itemvalue="TestNG.SelectorTests.checkoutDeleteFlowTest" />
       <item itemvalue="TestNG.SelectorTests.firstTest" />
-      <item itemvalue="Application.Test (1)" />
+      <item itemvalue="Application.Test (2)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test (2)" />
         <item itemvalue="Application.Test (1)" />
         <item itemvalue="Application.Test" />
         <item itemvalue="TestNG.SelectorTests.checkoutDeleteFlowTest" />
         <item itemvalue="TestNG.SelectorTests.firstTest" />
-        <item itemvalue="TestNG.SelectorTests.changeDressAttributesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -187,5 +185,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
